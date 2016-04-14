@@ -1,13 +1,14 @@
-package com.tieto.weather.model.rest;
+package com.tieto.weather.integration;
 
-import org.codehaus.jackson.annotate.JsonProperty;
-import org.codehaus.jackson.map.annotate.JsonRootName;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 
 /**
  * DTO class for weather observation's.
  */
 @JsonRootName(value = "result")
-public class WeatherObservation {
+public class WeatherUndergroundObservation {
 
     private String location;
 

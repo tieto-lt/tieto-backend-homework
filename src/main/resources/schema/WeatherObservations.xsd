@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           xmlns:weather="http://tieto.com/weather/schemas"
-           targetNamespace="http://tieto.com/weather/schemas">
+           xmlns:weather="http://tieto.com/weather/model/api"
+           targetNamespace="http://tieto.com/weather/model/api">
 
     <xs:element name="WeatherRequest">
         <xs:complexType>

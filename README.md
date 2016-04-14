@@ -23,32 +23,39 @@ Initially, when service was not used broadly, current solution was feasible, but
 
 ## Predefined locations
 
-Predefined locations is a set of locations that are preconfigured for application before depoyment - can be either external or packaged configuration.
+Predefined locations is a set of locations that are pre-configured for application before deployment - can be either external or packaged configuration.
 
- 1. Service must provide response times of less than 500ms for preconfigured locations. Locations must be provided via application configuration;
+ 1. Service must provide response times of less than 500ms for pre-configured locations. Locations must be provided via application configuration;
  2. Service must return recent observations for supported locations. Data should not be older than 3 hours, unless 3rd party weather service is down for a long period of time;
  3. Both provided SOAP and REST endpoints must return same data;
  4. Initial list of predefined locations: Vilnius, Riga, Tallinn, Helsinki.
 
 ## Popular locations
 
-Popular locations are the locations that are requested via clients for more than n times during lifetime of application (between redeployments/restarts).
+Popular locations are the locations that are requested via clients for more than n times during lifetime of application (between re-deployments/restarts).
 
  1. Requests for locations that are not in predefined location list still bust be satisfied, but without strict SLA requirements;
  2. If location is requested for more than n times (n is configurable), it must be automatically included in 'Predefined location' framework and satisfy same 500ms SLA requirement. Though this will be reset after application redeployment/restart.
 
 # Provided base implementation
 
-Base implementation is provided to take the boring part of set-up/wiring away and allow for prospect candidate to concentrate on engineering internals, adding tests, working on algo. 
+Base implementation is provided to take the boring part of set-up/wiring away and allow for prospect candidate to concentrate on engineering internals, adding tests, working on algo.
 
-Any needed additional libraries can be used, but changes/deviations from provided base implementation (like changing Spring REST to Jersey) can be done with proper motivation/explanation.
+Candidate can choose to implement everything from scratch by using other frameworks then Spring.
+When implementing from scratch at least these requirements should be satisfied:
+
+ 1. Java
+ 2. Maven or Gradle
+ 3. Easy to run using single command like 'mvn clean spring-boot:run'
 
 Additional notes:
 
  * This is simple maven project - 'mvn clean', 'mvn test'... works;
- * To run application - 'mvn jetty:run';
- * REST Endpoint URI: [http://localhost:8080/weather/](http://localhost:8080/weather/)
- * SOAP WSDL URI: [http://localhost:8080/ws/weather.wsdl](http://localhost:8080/ws/weather.wsdl).
+ * To run application via Maven - 'mvn clean spring-boot:run';
+ * To run application in IDE run Application.main;
+ * Intellij users: to make use of Spring Boot's toolset for hot reload of code enable 'Make project automatically'.
+ * REST Endpoint URI: [http://localhost:8080/weather/rest/observations/Vilnius](http://localhost:8080/weather/rest/observations/Vilnius)
+ * SOAP WSDL URI: [http://localhost:8080/weather/soap/weather.wsdl](http://localhost:8080/weather/soap/weather.wsdl).
 
 # Deliverables
 
