@@ -1,7 +1,6 @@
 package com.tieto.weather.api.context;
 
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
@@ -15,6 +14,7 @@ import org.springframework.xml.xsd.XsdSchema;
 @EnableWs
 @Configuration
 public class SoapConfiguration extends WsConfigurerAdapter {
+    public static final String NAMESPACE_URI = "http://tieto.com/weather/model/api";
 
     @Bean
     public MessageDispatcherServlet soapServlet() {

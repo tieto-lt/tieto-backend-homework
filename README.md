@@ -56,6 +56,7 @@ Additional notes:
  * Intellij users: to make use of Spring Boot's toolset for hot reload of code enable 'Make project automatically'.
  * REST Endpoint URI: [http://localhost:8080/weather/rest/observations/Vilnius](http://localhost:8080/weather/rest/observations/Vilnius)
  * SOAP WSDL URI: [http://localhost:8080/weather/soap/weather.wsdl](http://localhost:8080/weather/soap/weather.wsdl).
+ * SOAP Target URI: [http://localhost:8080/weather/soap](http://localhost:8080/weather/soap)
 
 # Deliverables
 

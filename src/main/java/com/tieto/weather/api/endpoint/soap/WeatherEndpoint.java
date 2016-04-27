@@ -8,14 +8,14 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
+import static com.tieto.weather.api.context.SoapConfiguration.NAMESPACE_URI;
+
 
 /**
  * Weather SOAP endpoint.
  */
 @Endpoint
 public class WeatherEndpoint {
-
-    private static final String NAMESPACE_URI = "http://tieto.com/weather/schemas";
 
     /**
      * Endpoint for fetching location weather data.
