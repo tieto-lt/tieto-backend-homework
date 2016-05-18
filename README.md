@@ -41,7 +41,7 @@ Popular locations are the locations that are requested via clients for more than
 
 Base implementation is provided to take the boring part of set-up/wiring away and allow for prospect candidate to concentrate on engineering internals, adding tests, working on algo.
 
-Candidate can choose to implement everything from scratch by using other frameworks then Spring.
+Candidate can choose to implement everything from scratch by using other frameworks than Spring.
 When implementing from scratch at least these requirements should be satisfied:
 
  1. Java
